@@ -1,0 +1,168 @@
+/* Global Styles & Variables */
+:root {
+    --primary-pink: #ff6b81;
+    --soft-pink: #ffe5e9;
+    --dark-pink: #c44569;
+    --text-color: #333;
+    --bg-light: #fff0f3;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light) !important;
+    color: var(--text-color);
+}
+
+/* Navbar Modernization */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-pink) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #555 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-pink) !important;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, var(--soft-pink) 0%, white 100%) !important;
+    border-radius: 0 0 50px 50px;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    margin-bottom: 3rem;
+    border: none;
+}
+
+h1.display-4 {
+    color: var(--dark-pink);
+    font-weight: 800;
+}
+
+/* Cards & Images - The Core Fix */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Enforce consistent image size */
+.card-img-top {
+    height: 250px;
+    /* Fixed height for consistency */
+    width: 100%;
+    object-fit: cover;
+    /* Ensures image covers the area without distortion */
+}
+
+/* Gallery Section */
+#gallery {
+    background-color: white !important;
+    /* Clean background */
+    padding-top: 3rem;
+}
+
+#gallery img {
+    border-radius: 15px;
+    height: 500px;
+    /* Fixed height */
+    width: 100%;
+    object-fit: cover;
+    /* Crop to fit */
+}
+
+/* Schedule Section */
+.card-header.bg-danger {
+    background-color: var(--primary-pink) !important;
+    border-bottom: none;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: var(--soft-pink);
+    color: var(--text-color);
+    margin-top: 3rem;
+}
+
+footer a i {
+    color: var(--dark-pink);
+    transition: transform 0.2s;
+}
+
+footer a i:hover {
+    transform: scale(1.2);
+}
+
+/* Dark Mode Overrides (basic support to work with existing JS) */
+body[style*="background-color: black"] {
+    --bg-light: #121212;
+    --text-color: #eee;
+    background-color: #121212 !important;
+}
+
+body[style*="background-color: black"] .navbar {
+    background-color: #1f1f1f !important;
+}
+
+body[style*="background-color: black"] .navbar-brand,
+body[style*="background-color: black"] .nav-link {
+    color: #eee !important;
+}
+
+body[style*="background-color: black"] .card {
+    background-color: #1f1f1f;
+    color: #eee;
+}
+
+body[style*="background-color: black"] #hero {
+    background: #1f1f1f !important;
+    color: white !important;
+}
+
+body[style*="background-color: black"] h1.display-4 {
+    color: var(--primary-pink);
+}
+
+/* Button Overrides */
+.btn-danger {
+    background-color: var(--primary-pink) !important;
+    border-color: var(--primary-pink) !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: var(--dark-pink) !important;
+    border-color: var(--dark-pink) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 129, 0.3);
+}
+
+.text-pink {
+    color: var(--primary-pink);
+}
+
+.form-control:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 129, 0.25);
+}
